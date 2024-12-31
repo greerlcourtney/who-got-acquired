@@ -10,14 +10,14 @@ function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
-      <Typography variant="h6"  py={10} sx={{ flexGrow: 1 }}>
-          Welcome to Invest-O-Clock!
+      <Typography variant="h6"  pb={10} py={5} sx={{ flexGrow: 1 }}>
+          Invest-O-Clock!
         </Typography>
         <Button color="inherit" component={Link} to="/">
           Home
         </Button>
         <Button color="inherit" component={Link} to="/latest-acquisition">
-          Latest Acquisition
+          Contact Us
         </Button>
       </Toolbar>
     </AppBar>
@@ -26,7 +26,5 @@ function Header() {
 
 export default Header;
 
-
-// src/components/Header.js
 
 

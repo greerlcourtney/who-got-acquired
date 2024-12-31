@@ -1,9 +1,12 @@
+// filepath: /Users/courtneygreer/Development/invest-o-clock/src/api/crunchbaseApi.js
 import axios from 'axios';
 
 const CRUNCHBASE_API_KEY = process.env.REACT_APP_CRUNCHBASE_API_KEY;
 
+console.log('CRUNCHBASE_API_KEY:', CRUNCHBASE_API_KEY); // Log the API key to ensure it's being read correctly
+
 const crunchbaseApi = axios.create({
-  baseURL: 'https://api.crunchbase.com/api/v4/',
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://api.crunchbase.com/api/v4/',
   headers: {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${CRUNCHBASE_API_KEY}`,
@@ -17,9 +20,9 @@ const crunchbaseApi = axios.create({
 export const fetchLatestAcquiredCompany = async () => {
   try {
     const response = await crunchbaseApi.post(
-      `/searches/organization/acquisition`,
+      '/searches/organization/acquisition',
       {
-        field_ids: ['identifier', 'acquisition_date', 'price'],
+        field_ids: ['name', 'website_url', 'short_description'],
         query: [],
         sort: [
           {
