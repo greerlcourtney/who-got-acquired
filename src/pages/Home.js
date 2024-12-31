@@ -1,23 +1,24 @@
 import React from 'react'
-import { Button, Typography } from '@mui/material';
+import Layout from '../components/Layout';
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import LatestAcquisitionCard from '../components/LatestAcquisitionCard';
+
 
 
  function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Typography variant="h1" component="h1" gutterBottom>
-            Welcome to Invest-O-Clock!
+   <Layout>
+    <Box textAlign="center" mt={8}>
+        <Typography variant="h4" >
+           The latest aquisition has been ....
         </Typography>
-        <Typography variant="p" component="p" gutterBottom>
-            Click Below to see the latest investment
-        </Typography>
-        <Button variant="contained" color="primary">
-            Click me! 
-        </Button>
-        </header>
-    </div>
-  )
-};
+    </Box>
+    <Box textAlign={'center'} mt={4}>
+         <LatestAcquisitionCard />
+    </Box>
+    </Layout>
+  );
+}
 
 export default Home;
