@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <AppBar position="static">
-      <Toolbar>
-      <Typography variant="h6"  pb={10} py={5} sx={{ flexGrow: 1 }}>
+    <AppBar position="static" >
+      <Toolbar >
+      <Typography variant="h6"  sx={{ flexGrow: 1 }} >
           Invest-O-Clock!
         </Typography>
         <Button color="inherit" component={Link} to="/">
           Home
         </Button>
-        <Button color="inherit" component={Link} to="/latest-acquisition">
+        <Button color="inherit" component={Link} to="/contact">
           Contact Us
         </Button>
       </Toolbar>

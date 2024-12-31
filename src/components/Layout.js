@@ -9,13 +9,14 @@ const Layout = ({ children }) => {
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Header />
-      <Container maxWidth="lg" component="main" flexGrow={1}>
-        <Box my={4}>
+      <Container maxWidth="lg" component="main" flexGrow={1} >
+        <Box>
           {children}
         </Box>
       </Container>
       <Footer />
     </Box>
+
   );
 };
 

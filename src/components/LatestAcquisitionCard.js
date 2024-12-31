@@ -1,59 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import { fetchSamplePost } from '../api/jsonplaceholderApi';
-import Typography from '@mui/material/Typography';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import React from 'react';
+import { Box, Typography, Grid, Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
 
 function LatestAcquisitionCard() {
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const loadSamplePost = async () => {
-      try {
-        const data = await fetchSamplePost();
-        setPost(data);
-      } catch (err) {
-        setError('Failed to fetch the sample post.');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadSamplePost();
-  }, []);
-
-  if (loading) {
-    return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
-        <CircularProgress />
-      </Box>
-    );
-  }
-
-  if (error) {
-    return (
-      <Typography color="error">{error}</Typography>
-    );
-  }
+  const acquisitionData = {
+    companyName: 'TechCorp',
+    dealAmount: '$500M',
+    acquirerName: 'BigTech Inc.',
+    announcementDate: 'January 1, 2024',
+    acquireeIndustry: 'Software',
+    acquirerIndustry: 'Technology',
+    acquireeFundingAmount: '$200M',
+    acquireeFundingLastRound: 'Series D',
+  };
 
   return (
-    <>
-    <Box borderColor={'black'} border={1} borderRadius={16} p={2} m={2}>
-      <Typography variant="h4" gutterBottom>
-        Disney Channel
-      </Typography>
-      {post ? (
-        <Box>
-          <Typography variant="h6">Title: {post.title}</Typography>
-          <Typography variant="body1">Body: {post.body}</Typography>
-        </Box>
-      ) : (
-        <Typography>No post data available.</Typography>
-      )}
-     </Box>
-    </>
+    <Box textAlign="center" p={2}>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12}>
+          <Typography variant="h4" pb={18} gutterBottom>
+            {acquisitionData.companyName}
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Deal Amount</TableCell>
+                  <TableCell>{acquisitionData.dealAmount}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acquirer Name</TableCell>
+                  <TableCell>{acquisitionData.acquirerName}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Announcement Date</TableCell>
+                  <TableCell>{acquisitionData.announcementDate}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acquiree Industry</TableCell>
+                  <TableCell>{acquisitionData.acquireeIndustry}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acquirer Industry</TableCell>
+                  <TableCell>{acquisitionData.acquirerIndustry}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acquiree Funding Amount</TableCell>
+                  <TableCell>{acquisitionData.acquireeFundingAmount}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acquiree Funding Last Round</TableCell>
+                  <TableCell>{acquisitionData.acquireeFundingLastRound}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 
