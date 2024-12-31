@@ -1,22 +1,20 @@
-import React from 'react'
+import React from 'react';
 import Layout from '../components/Layout';
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import LatestAcquisitionCard from '../components/LatestAcquisitionCard';
 
-
-
- function Home() {
+function Home() {
   return (
-   <Layout>
-    <Box textAlign="center" mt={8}>
-        <Typography variant="h4" >
-           The latest aquisition has been ....
+    <Layout>
+      <Box textAlign="center" mt={8}>
+        <Typography variant="h4">
+          The latest acquisition has been ....
         </Typography>
-    </Box>
-    <Box textAlign={'center'} mt={4}>
-         <LatestAcquisitionCard />
-    </Box>
+      </Box>
+      <Box textAlign="center" mt={4}>
+        <LatestAcquisitionCard />
+      </Box>
     </Layout>
   );
 }

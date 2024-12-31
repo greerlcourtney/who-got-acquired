@@ -6,21 +6,21 @@ import Footer from './Footer';
 import Container from '@mui/material/Container';
 
 const Layout = ({ children }) => {
-    return (
-        <>
-            <Header />
-            <Container maxWidth="lg">
-                <Box my={10}>
-                    {children}
-                </Box>
-            </Container>
-            <Footer />
-        </>
-    );
+  return (
+    <Box display="flex" flexDirection="column" minHeight="100vh">
+      <Header />
+      <Container maxWidth="lg" component="main" flexGrow={1}>
+        <Box my={4}>
+          {children}
+        </Box>
+      </Container>
+      <Footer />
+    </Box>
+  );
 };
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

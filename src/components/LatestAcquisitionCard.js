@@ -1,73 +1,60 @@
 import React, { useEffect, useState } from 'react';
-import { fetchLatestAcquiredCompany } from '../api/crunchbaseApi';
+import { fetchSamplePost } from '../api/jsonplaceholderApi';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
-function LatestAcquistionCard() {
-  const [acquisition, setAcquisition] = useState(null);
+function LatestAcquisitionCard() {
+  const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const loadLatestAcquistionCard = async () => {
+    const loadSamplePost = async () => {
       try {
-        const data = await fetchLatestAcquiredCompany();
-        if (data) {
-          setAcquisition(data);
-        } else {
-          setError('No acquisition data available.');
-        }
+        const data = await fetchSamplePost();
+        setPost(data);
       } catch (err) {
-        setError('Failed to fetch the latest acquisition.');
+        setError('Failed to fetch the sample post.');
       } finally {
         setLoading(false);
       }
     };
 
-    loadLatestAcquistionCard();
+    loadSamplePost();
   }, []);
 
   if (loading) {
     return (
-
-        <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
-          <CircularProgress />
-        </Box>
-
+      <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
+        <CircularProgress />
+      </Box>
     );
   }
 
   if (error) {
     return (
-
-        <Typography color="error">{error}</Typography>
-
+      <Typography color="error">{error}</Typography>
     );
   }
 
   return (
     <>
+    <Box borderColor={'black'} border={1} borderRadius={16} p={2} m={2}>
       <Typography variant="h4" gutterBottom>
-        Latest Acquired Company
+        Disney Channel
       </Typography>
-      {acquisition ? (
+      {post ? (
         <Box>
-          <Typography variant="h6">
-            {acquisition.properties?.identifier?.value || 'N/A'}
-          </Typography>
-          <Typography variant="body1">
-            Acquired On: {acquisition.properties?.acquisition_date || 'N/A'}
-          </Typography>
-          <Typography variant="body2">
-            Price: {acquisition.properties?.price || 'N/A'}
-          </Typography>
+          <Typography variant="h6">Title: {post.title}</Typography>
+          <Typography variant="body1">Body: {post.body}</Typography>
         </Box>
       ) : (
-        <Typography>No acquisition data available.</Typography>
+        <Typography>No post data available.</Typography>
       )}
-  </>
+     </Box>
+    </>
   );
 }
 
-export default LatestAcquistionCard;
+export default LatestAcquisitionCard;

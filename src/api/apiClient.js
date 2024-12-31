@@ -1,45 +1,25 @@
-// src/api/apiClient.js
+// src/api/jsonPlaceholderApi.js
 
 import axios from 'axios';
 
-// Load API Key from Environment Variables
-const CRUNCHBASE_API_KEY = process.env.REACT_APP_CRUNCHBASE_API_KEY;
-
-// Create an Axios Instance for Crunchbase API
-const apiClient = axios.create({
-  baseURL: 'https://api.crunchbase.com/api/v4/',
+// Create Axios Instance for JSONPlaceholder
+const jsonPlaceholderApi = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com',
   headers: {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${CRUNCHBASE_API_KEY}`,
   },
-  timeout: 10000, // Optional: 10-second timeout for requests
 });
 
-// Request Interceptor
-apiClient.interceptors.request.use(
-  (config) => {
-    // Log outgoing requests (optional)
-    console.log(`[API Request] ${config.method.toUpperCase()} - ${config.url}`);
-    return config;
-  },
-  (error) => {
-    console.error('[API Request Error]:', error);
-    return Promise.reject(error);
+/**
+ * Fetch a sample post from JSONPlaceholder
+ * @returns {Object} Post data
+ */
+export const fetchLatestAcquiredCompany = async () => {
+  try {
+    const response = await jsonPlaceholderApi.get('/posts/1');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching sample post:', error.response?.data || error.message);
+    throw error;
   }
-);
-
-// Response Interceptor
-apiClient.interceptors.response.use(
-  (response) => {
-    // Log successful responses (optional)
-    console.log('[API Response Success]:', response.status);
-    return response;
-  },
-  (error) => {
-    // Handle global API errors
-    console.error('[API Response Error]:', error.response?.data || error.message);
-    return Promise.reject(error);
-  }
-);
-
-export default apiClient;
+};
