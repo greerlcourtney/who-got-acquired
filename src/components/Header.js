@@ -1,30 +1,26 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
-
+import { Grid, Box, Typography } from '@mui/material';
+import './Header.css';
 
 function Header() {
   return (
-    <AppBar position="static" >
-      <Toolbar >
-      <Typography variant="h6"  sx={{ flexGrow: 1 }} >
-          Invest-O-Clock!
-        </Typography>
-        <Button color="inherit" component={Link} to="/">
-          Home
-        </Button>
-        <Button color="inherit" component={Link} to="/contact">
-          Contact Us
-        </Button>
-      </Toolbar>
-    </AppBar>
+    <header>
+      <Box p={1}>
+        <Grid container alignItems="center">
+          <Grid item xs={3} textAlign="center">
+            <Typography variant="h6">Welcome to Infiniti-Minds</Typography>
+          </Grid>
+          <Grid item xs={8} textAlign="right">
+            <nav>
+              <a href="/">Home</a>
+              <a href="/blog">Blog</a>
+              <a href="/contact-us">Contact Us</a>
+            </nav>
+          </Grid>
+        </Grid>
+      </Box>
+    </header>
   );
 }
 
 export default Header;
-
-
-

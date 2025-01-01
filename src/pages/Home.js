@@ -7,12 +7,12 @@ import LatestAcquisitionCard from '../components/LatestAcquisitionCard';
 function Home() {
   return (
     <Layout>
-      <Box textAlign="center" mt={8}>
+      <Box textAlign="center" mt={7} mb={5}>
         <Typography variant="h4">
-          The latest acquisition has been ....
+          The latest acquisition is
         </Typography>
       </Box>
-      <Box textAlign="center" mt={4}>
+      <Box textAlign="center" my={4}>
         <LatestAcquisitionCard />
       </Box>
     </Layout>

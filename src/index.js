@@ -1,22 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#f5f5f5',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
+import './styles/theme.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeProvider theme={theme}>
+  <React.StrictMode>
+    <div className="matrix-bg"></div>
     <App />
-  </ThemeProvider>
+  </React.StrictMode>
 );

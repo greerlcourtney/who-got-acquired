@@ -1,0 +1,79 @@
+/* src/components/Header.css */
+
+/* Header Container */
+header {
+    background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    border-bottom: 1px solid #00ff41;
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Styling */
+  header .logo {
+    width: 50px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    filter: drop-shadow(0 0 15px #00ff41);
+    animation: logoGlow 2s infinite alternate;
+  }
+  
+
+  
+  /* Logo Glow Animation */
+  @keyframes logoGlow {
+    0% {
+      filter: drop-shadow(0 0 10px #00ff41);
+    }
+    100% {
+      filter: drop-shadow(0 0 20px #00ff41);
+    }
+  }
+  
+  /* Header Title */
+  header h1 {
+    color: #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Header Navigation (Optional Future Enhancement) */
+  header nav {
+    margin-top: 0.5rem;
+    padding: 15px;
+  }
+  
+  header nav a {
+    color: #00ff41;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ff41;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    header .logo {
+      width: 120px;
+    }
+  
+    header nav a {
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
+    }
+  }
+  
