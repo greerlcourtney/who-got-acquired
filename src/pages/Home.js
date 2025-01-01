@@ -9,11 +9,14 @@ function Home() {
     <Layout>
       <Box textAlign="center" mt={7} mb={5}>
         <Typography variant="h4">
-          The latest acquisition is
+            Weekly Investment List
         </Typography>
       </Box>
       <Box textAlign="center" my={4}>
         <LatestAcquisitionCard />
+      </Box>
+      <Box textAlign="center" my={4}>
+        {Date().toString()}
       </Box>
     </Layout>
   );
