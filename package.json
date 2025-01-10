@@ -1,19 +1,20 @@
 {
-  "name": "investment-tracker",
+  "name": "invest-o-clock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.3.0",
-    "@mui/material": "^6.3.0",
+    "@mui/icons-material": "^6.3.1",
+    "@mui/material": "^6.3.1",
+    "@mui/system": "^6.3.1",
     "@testing-library/react": "^13.4.0",
     "axios": "^1.7.9",
     "http-proxy-middleware": "^3.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^7.1.1",
-    "react-scripts": "^3.0.1",
+    "react-router-dom": "^6.28.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
   },
   "homepage": "https://greerlcourtney.github.io/invest-o-clock",
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
     "gh-pages": "^6.3.0"
   }
 }
