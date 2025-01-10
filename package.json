@@ -2,6 +2,7 @@
   "name": "invest-o-clock",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://greerlcourtney.github.io/invest-o-clock",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -17,7 +18,7 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
   },
-  "homepage": "https://greerlcourtney.github.io/invest-o-clock",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

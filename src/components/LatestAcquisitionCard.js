@@ -18,7 +18,7 @@ function LatestAcquisitionCard() {
     <Box textAlign="center" p={4}>
       <Grid container spacing={2} direction="column" alignItems="center">
         <Grid item xs={12}>
-          <Typography variant="h3" py={6} gutterBottom>
+          <Typography variant="h3" py={2} gutterBottom>
             {acquisitionData.companyName}
           </Typography>
         </Grid>
