@@ -8,11 +8,11 @@ function Home() {
   return (
     <Layout>
       <Box textAlign="center" mt={7} mb={5}>
-        <Typography variant="h4">
+        <Typography variant="h3">
             Weekly Investment List
         </Typography>
       </Box>
-      <Box textAlign="center" my={4}>
+      <Box textAlign="center" my={2}>
         <LatestAcquisitionCard />
       </Box>
       <Box textAlign="center" my={4}>

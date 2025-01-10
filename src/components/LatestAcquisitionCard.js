@@ -18,11 +18,11 @@ function LatestAcquisitionCard() {
     <Box textAlign="center" p={4}>
       <Grid container spacing={2} direction="column" alignItems="center">
         <Grid item xs={12}>
-          <Typography variant="h3" py={10} gutterBottom>
+          <Typography variant="h3" py={6} gutterBottom>
             {acquisitionData.companyName}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={6}>
           <TableContainer component={Paper} className="light-neon-green">
             <Table size="small">
               <TableBody>
