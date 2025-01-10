@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/invest-o-clock/static/css/main.24cbdca3.css",
-    "main.js": "/invest-o-clock/static/js/main.6912cb49.js",
+    "main.js": "/invest-o-clock/static/js/main.7be06169.js",
     "index.html": "/invest-o-clock/index.html",
     "main.24cbdca3.css.map": "/invest-o-clock/static/css/main.24cbdca3.css.map",
-    "main.6912cb49.js.map": "/invest-o-clock/static/js/main.6912cb49.js.map"
+    "main.7be06169.js.map": "/invest-o-clock/static/js/main.7be06169.js.map"
   },
   "entrypoints": [
     "static/css/main.24cbdca3.css",
-    "static/js/main.6912cb49.js"
+    "static/js/main.7be06169.js"
   ]
 }
