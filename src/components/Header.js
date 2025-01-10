@@ -7,10 +7,11 @@ function Header() {
     <header>
       <Box p={1}>
         <Grid container alignItems="center">
-          <Grid item xs={3} textAlign="center">
+          <Grid item xs={1} textAlign="center">
+            <img src={`${process.env.PUBLIC_URL}/logo.jpeg`} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
             <Typography variant="h6">Welcome to Infiniti-Minds</Typography>
           </Grid>
-          <Grid item xs={8} textAlign="right">
+          <Grid item xs={11} textAlign="right">
             <nav>
               <a href="/">Home</a>
               <a href="/blog">Blog</a>
