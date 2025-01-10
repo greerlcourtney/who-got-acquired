@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/invest-o-clock/static/css/main.ae062a5e.css",
-    "main.js": "/invest-o-clock/static/js/main.bdbec8c2.js",
-    "static/js/462.55d16fb8.chunk.js": "/invest-o-clock/static/js/462.55d16fb8.chunk.js",
-    "index.html": "/invest-o-clock/index.html",
-    "main.ae062a5e.css.map": "/invest-o-clock/static/css/main.ae062a5e.css.map",
-    "main.bdbec8c2.js.map": "/invest-o-clock/static/js/main.bdbec8c2.js.map",
-    "462.55d16fb8.chunk.js.map": "/invest-o-clock/static/js/462.55d16fb8.chunk.js.map"
+    "main.css": "/static/css/main.ae062a5e.css",
+    "main.js": "/static/js/main.efc1d23c.js",
+    "static/js/462.55d16fb8.chunk.js": "/static/js/462.55d16fb8.chunk.js",
+    "index.html": "/index.html",
+    "main.ae062a5e.css.map": "/static/css/main.ae062a5e.css.map",
+    "main.efc1d23c.js.map": "/static/js/main.efc1d23c.js.map",
+    "462.55d16fb8.chunk.js.map": "/static/js/462.55d16fb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae062a5e.css",
-    "static/js/main.bdbec8c2.js"
+    "static/js/main.efc1d23c.js"
   ]
 }
