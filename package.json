@@ -3,22 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://greerlcourtney.github.io/invest-o-clock",
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.3.1",
-    "@mui/material": "^6.3.1",
-    "@mui/system": "^6.3.1",
-    "@testing-library/react": "^13.4.0",
-    "axios": "^1.7.9",
-    "http-proxy-middleware": "^3.0.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.28.1",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^4.2.4"
-  },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
