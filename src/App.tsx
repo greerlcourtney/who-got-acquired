@@ -37,7 +37,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/invest-o-clock">
         <div className="min-h-screen bg-matrix-dark text-white">
           <Navigation />
           <Routes>
