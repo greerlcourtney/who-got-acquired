@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: '/invest-o-clock/', // Ensure this matches your GitHub Pages repository name
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: '/index.html'
+      }
+    }
   }
 });
