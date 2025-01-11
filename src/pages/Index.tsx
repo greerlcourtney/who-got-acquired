@@ -1,4 +1,4 @@
-import React from "react";
+
 import { NewsTicker } from "@/components/NewsTicker";
 import { MarketPulse } from "@/components/MarketPulse";
 import { InvestmentMetrics } from "@/components/InvestmentMetrics";
