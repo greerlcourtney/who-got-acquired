@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
+
+
 const queryClient = new QueryClient();
 
 const Navigation = () => (
@@ -37,7 +39,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/invest-o-clock">
+      <BrowserRouter basename={process.env.NODE_ENV === "production" ? "/invest-o-clock" : "/"}>
         <div className="min-h-screen bg-matrix-dark text-white">
           <Navigation />
           <Routes>

@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+        "jsx": "react-jsx",
     "target": "ES2022",
     "lib": ["ES2023", "DOM"],
     "module": "ESNext",
@@ -15,8 +16,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": true
   },
   "include": ["src"]
 }
