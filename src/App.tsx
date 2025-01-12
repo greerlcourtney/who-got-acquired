@@ -40,6 +40,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
+        <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
