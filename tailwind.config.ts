@@ -76,7 +76,43 @@ export default {
         ticker: "ticker 30s linear infinite",
         glow: "glow 2s ease-in-out infinite",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+            a: {
+              color: '#00FF41',
+              '&:hover': {
+                color: '#00FF41',
+              },
+            },
+            p: {
+              color: 'inherit',
+            },
+            h1: {
+              color: '#00FF41',
+            },
+            h2: {
+              color: '#00FF41',
+            },
+            h3: {
+              color: '#00FF41',
+            },
+            h4: {
+              color: '#00FF41',
+            },
+            code: {
+              color: '#00FF41',
+            },
+            strong: {
+              color: '#00FF41',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [require("tailwindcss-animate"), 
+require("@tailwindcss/typography")],
 } satisfies Config;

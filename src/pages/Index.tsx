@@ -1,9 +1,11 @@
 
 import { NewsTicker } from "@/components/NewsTicker";
-import { MarketPulse } from "@/components/MarketPulse";
-import { InvestmentMetrics } from "@/components/InvestmentMetrics";
-import { MicroInsights } from "@/components/MicroInsights";
-import { EmergingTrends } from "@/components/EmergingTrends";
+import { TopInvestments } from "@/components/TopInvestments";
+import { NewAcquisitions } from "@/components/NewAquistions";
+import { YearToDateSummary } from "@/components/YearToDateSummary";
+import { TopNews } from "@/components/TopNews";
+import { RecentBlogs } from "@/components/RecentBlogs";
+
 
 const Index = () => {
   return (
@@ -14,15 +16,18 @@ const Index = () => {
           <p className="text-white/80 mt-2">AI Investment Intelligence</p>
         </div>
       </header>
-
       <NewsTicker />
-
       <main className="container py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <MarketPulse />
-          <InvestmentMetrics />
-          <MicroInsights />
-          <EmergingTrends />
+      <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <TopInvestments />
+            <NewAcquisitions />
+          </div>
+          <YearToDateSummary />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <TopNews />
+            <RecentBlogs />
+          </div>
         </div>
       </main>
     </div>
