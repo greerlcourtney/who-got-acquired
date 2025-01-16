@@ -1,28 +1,16 @@
 # Welcome to my project
 
 ## Project info
-
-**URL**: https://lovable.dev/projects/0063147e-a246-42f2-83d8-7e911acee0c8
+Dive into the world of startup investing with this blog. Discover valuable insights, stay ahead of the curve, and build a strong foundation for your investment journey. This blog is your go-to source for bite-sized investment data.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
-
-```sh
+## Follow these steps:
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Step 3: Install the necessary dependencies - npm i
+# Step 4: Start the development server with auto-reloading and an instant preview - npm run dev
 ```
-
-
 
 ## What technologies are used for this project?
 
