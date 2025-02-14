@@ -2,7 +2,6 @@
 import { NewsTicker } from "@/components/NewsTicker";
 import { TopInvestments } from "@/components/TopInvestments";
 import { NewAcquisitions } from "@/components/NewAquistions";
-import { YearToDateSummary } from "@/components/YearToDateSummary";
 import { TopNews } from "@/components/TopNews";
 import { RecentBlogs } from "@/components/RecentBlogs";
 
@@ -23,7 +22,6 @@ const Index = () => {
             <TopInvestments />
             <NewAcquisitions />
           </div>
-          <YearToDateSummary />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <TopNews />
             <RecentBlogs />
